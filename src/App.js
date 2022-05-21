@@ -1,14 +1,17 @@
+import './App.css'
+
 function App() {
   return (
     <div className="App">
-      <h1>Wordle</h1>
+      <h1>Wordle (Lingo)</h1>
     </div>
   );
 }
 
-export default App;
+export default App
 
 /* 
+
 data we need to track:
   -- solution
     -- 5 letter string, e.g. 'drain'
@@ -22,6 +25,7 @@ data we need to track:
     -- array of letter objects [{key: 'a', color: 'green'}, {}, {} ...]
   -- number of turns
     -- an integer 0 - 6
+
 game process:
   -- entering words:
     -- user enters a letter & a square is filled with that letter
@@ -43,4 +47,5 @@ game process:
       -- modal to say 'well done'
     -- when the user runs out of guesses
       -- modal to say 'unlucky'
+
 */
