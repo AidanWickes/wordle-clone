@@ -18,7 +18,22 @@ const useWordle = (solution) => {
 
   // handle keypresses & track current guess
   // if use presses enter then submit the guess
-  const handleKeyPress = (e) => {};
+  const handleKeyPress = ({ key }) => {
+    if (key === "Backspace") {
+      setCurrentGuess((prevGuess) => {
+        return prevGuess.slice(0, -1);
+      });
+      return;
+    }
+
+    if (/^[A-Za-z]$/.test(key)) {
+      if (currentGuess.length < 5) {
+        setCurrentGuess((prevGuess) => {
+          return prevGuess + key;
+        });
+      }
+    }
+  };
 
   return { turn, currentGuess, guesses, isCorrect, handleKeyPress };
 };
