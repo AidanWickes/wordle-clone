@@ -9,9 +9,6 @@ const useWordle = (solution) => {
 
   // format a guess into an array of letter objects
   // [{letter: 'a', color: 'yellow'}, {}, {} ...]
-<<<<<<< HEAD
-  const formatGuess = (guess) => {};
-=======
   const formatGuess = (guess) => {
     let solutionArray = [...solution];
     let guessArray = [...guess].map((letter) => {
@@ -36,7 +33,6 @@ const useWordle = (solution) => {
 
     return guessArray;
   };
->>>>>>> dev
 
   // add a new guess to the past guesses
   // update the isCorrect property if the guess is correct
@@ -65,8 +61,6 @@ const useWordle = (solution) => {
   // handle keypresses & track current guess
   // if use presses enter then submit the guess
   const handleKeyPress = ({ key }) => {
-<<<<<<< HEAD
-=======
     if (key === "Enter") {
       //only add guess if turns < 5
       if (turn > 5) {
@@ -89,7 +83,6 @@ const useWordle = (solution) => {
       addGuess(formattedGuess);
     }
 
->>>>>>> dev
     if (key === "Backspace") {
       setCurrentGuess((prevGuess) => {
         return prevGuess.slice(0, -1);
